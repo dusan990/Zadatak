@@ -1,0 +1,62 @@
+@use '../abstract/variables' as var;
+
+header {
+   // padding-block: 32px;
+   background-color: var.$color-orange;
+   
+   .container {
+      display: flex;
+      align-items: center;
+
+      nav {
+         ul {
+            display: flex;
+            gap: 24px;
+         }
+      }
+
+      nav.main_nav {
+         margin-inline: 48px 32px;
+         //@support
+         
+         ul {
+            li {
+               display: flex;
+               align-items: center;
+               position: relative;
+               height: 120px;
+   
+               a {
+                  color: var.$color-white;
+                  padding-inline: 8px;
+               }
+   
+               &.active {
+                  a {
+                     color: var.$color-black;
+                  }
+   
+                  &::after {
+                     content: '';
+                     position: absolute;
+                     left: 0;
+                     bottom: 0;
+                     width: 100%;
+                     height: 5px;
+         
+                     background: var.$color-black;
+                  }
+               }
+            }
+         }
+      }
+
+      nav.user_nav {
+         margin-left: auto;
+
+         i {
+            color: var.$icon-white
+         }
+      }
+   }
+}

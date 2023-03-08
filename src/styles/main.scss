@@ -1,3 +1,9 @@
 @use 'abstract';
 @use 'base';
 @use 'pages';
+@use 'components';
+
+.container {
+   width: 1216px;
+   margin-inline: auto;
+}

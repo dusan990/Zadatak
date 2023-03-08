@@ -1,0 +1,16 @@
+@use '../abstract/variables' as var;
+
+.input_container {
+   height: 56px;
+   display: flex;
+   align-items: center;
+   padding-inline: 16px 14px;
+   
+   background: var.$color-grey-light;
+   border-bottom: 1px solid var.$color-border;
+   border-radius: 4px 4px 0 0;
+
+   &::placeholder {
+      color: var.$color-grey-darkest;
+   }
+}
