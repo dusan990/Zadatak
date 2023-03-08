@@ -1,0 +1,91 @@
+@use '../abstract/variables' as var;
+
+body {
+   font-family: var.$ff-inter;
+   font-size: 1rem;
+   line-height: 1.5rem;
+   font-style: normal;
+   font-weight: 400;
+}
+
+h1, h2 {
+   font-family: var.$ff-poppins;
+}
+
+h1 {
+   font-size: 2.5rem;
+   line-height: 3rem;
+   font-weight: 600;
+   color: #1E1E1E;
+
+   // tbd-smartphone
+   // font-size: 28px;
+   // line-height: 36px;
+}
+
+h2 {
+   font-size: 1.647rem;
+   line-height: 2.25rem;
+   font-weight: 600;
+
+   // tbd smartphone
+   // font-weight: 600;
+   // font-size: 24px;
+   // line-height: 32px;
+}
+
+p {
+   &,
+   &.body {
+      font-weight: 400;
+      color: #1E1E1E;
+   }
+
+   &--small {
+      font-size: 1.142rem;
+   }
+   &--bold {
+      font-weight: 600;
+   }
+}
+
+label {
+   font-size: 0.8rem;
+   line-height: 1.5rem;
+}
+
+// /* Cart-value */
+// font-family: 'Inter';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 15px;
+// line-height: 18px;
+
+
+// /* Breadcrumb */
+// font-family: 'Inter';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 13px;
+// line-height: 18px;
+
+// /* Field-value */
+// font-family: 'Inter';
+// font-style: normal;
+// font-weight: 400;
+// font-size: 14px;
+// line-height: 18px;
+
+// /* Button-label */
+// font-family: 'Poppins';
+// font-style: normal;
+// font-weight: 600;
+// font-size: 16px;
+// line-height: 24px;
+
+// /* Menu */
+// font-family: 'Inter';
+// font-style: normal;
+// font-weight: 600;
+// font-size: 18px;
+// line-height: 24px;
