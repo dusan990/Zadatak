@@ -1,5 +1,18 @@
 import "./styles/main.scss";
 
+const openModalButton = document.getElementById("openModal");
+const closeModalButton = document.querySelectorAll("#closeModal");
+const modal = document.getElementById("modal") as HTMLDialogElement;
+
+openModalButton?.addEventListener('click', () => {
+   modal?.showModal();
+});
+closeModalButton.forEach(btn => {
+   btn?.addEventListener('click', () => {
+      modal?.close();
+   });
+});
+            
 document.addEventListener("DOMContentLoaded", () => {
    const navLinks = document.querySelectorAll('.main_nav ul li a') as NodeListOf<HTMLAnchorElement>;
    const navList = document.querySelectorAll('.main_nav ul li');

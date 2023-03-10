@@ -29,8 +29,14 @@ header {
       .btn_menu {
          margin-right: 8px;
       }
+
+      .logo {
+         @include respond-to('small') {
+            height: 21px;
+         }
+      }
       
-      .search_input {
+      .search_input_container {
          @include respond-to('small') {
             display: none;
          }

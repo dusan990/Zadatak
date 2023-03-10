@@ -24,7 +24,7 @@ body
                p.product-description-text.mb_24 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
                .product-selection
-                  .select
+                  .select_input_container
                      label Model
                      select
                         option(value="placeholder-item" selected="") Choose an option
@@ -35,7 +35,7 @@ body
                         option(value="Gents - Medium") Gents - Medium
                         option(value="Gents - Large") Gents - Large
                      i.fa-solid.fa-chevron-down
-                  .select
+                  .select_input_container
                      label Color
                      select
                         option(value="placeholder-item" selected="") Choose an option
@@ -63,9 +63,9 @@ body
                   )
                   label#option-label-2.option-label.gap_8(for="option2") Add option lorem ipsum
                
-               .product-actions-container
+               .btn-actions-container
                   button.btn_primary.btn_primary--green Add to cart
-                  button.btn_secondary.btn_secondary--green Contact us
+                  button.btn_secondary.btn_secondary--green#openModal Contact us
             .product-slider(tabindex="1" aria-label="Product gallery")
                button.btn_icon#prev(aria-label="Prevous image")
                   i.fa-solid.fa-chevron-left.fa-lg
@@ -152,3 +152,5 @@ body
                         td 45 km/h
                         td 625 Wh
                         td Bosch Performance Line Speed
+
+include src/components/modal.pug

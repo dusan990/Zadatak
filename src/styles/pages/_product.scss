@@ -84,7 +84,7 @@
             }
          }
          
-         .product-actions-container {
+         .btn-actions-container {
             @include respond-to('small') {
                width: 100%;
                display: flex;

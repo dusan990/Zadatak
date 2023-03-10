@@ -3,8 +3,8 @@ header
       a.skip_link(href="index.html" aria-label="Jump to product section") Jump to product section
       button.btn.btn_menu
          i.fa-solid.fa-bars.fa-lg
-      a(href="index.html" aria-label="Go to home screen")
-         include ../assets/logo.pug
+      a.logo(href="index.html" aria-label="Go to home screen")
+         img(src="./src/assets/LOGO.svg")
       nav.main_nav
          ul
             li
@@ -16,7 +16,7 @@ header
             li
                a(href="#" aria-label="Contact") Contact
 
-      .search_input
+      .search_input_container
          input.input.input--icon(type="search" placeholder="Search" aria-label="Search")
          i.fa-solid.fa-magnifying-glass.fa-lg
       

@@ -10,6 +10,11 @@ main {
    }
 }
 
+*:focus-visible {
+   outline: 2px solid blue;
+   outline-offset: 2px;
+}
+
 .container {
    max-width: 1216px;
    margin-inline: auto;
@@ -17,11 +22,6 @@ main {
    @include respond-to('small') {
       width: 100%;
    }
-}
-
-label {
-   display: flex;
-   align-items: center;
 }
 
 .img_wrap {
@@ -37,9 +37,4 @@ label {
       width: 100%;
       height: auto;
    }
-}
-
-*:focus-visible {
-   outline: 2px solid blue;
-   outline-offset: 2px;
 }

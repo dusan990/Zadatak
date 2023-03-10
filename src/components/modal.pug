@@ -1,0 +1,19 @@
+dialog#modal
+   button.btn-close#closeModal(aria-label="close modal" tabindex="0")
+      i.fa-solid.fa-close.fa-lg
+   form.modal-content
+      h2 Contact us
+      p We’ll get back to you as soon as possible.
+
+      input(
+         type="text"
+         placeholder="Your e-mail"
+      )
+      textarea(
+         placeholder="Your message"
+         rows="5" cols="25"
+      )
+
+      div.btn-actions-container
+         button.btn_ghost#closeModal Cancel
+         button.btn_primary.btn_primary--orange Send message
