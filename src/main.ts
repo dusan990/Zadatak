@@ -1,7 +1,7 @@
 import "./styles/main.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
-   const navLinks = document.querySelectorAll('.main_nav ul li a');
+   const navLinks = document.querySelectorAll('.main_nav ul li a') as NodeListOf<HTMLAnchorElement>;
    const navList = document.querySelectorAll('.main_nav ul li');
    const currentUrl = window.location.href;
 
@@ -21,7 +21,8 @@ let slideIndex:number = 1;
 showSlides(slideIndex);
 
 function showSlides(n:number) {
-   const slides:HTMLCollectionOf<Element> = document.getElementsByClassName("product-slider-slide");
+   const slides = Array.from(document.getElementsByClassName('product-slider-slide') as HTMLCollectionOf<HTMLElement>)
+
 
    n > slides.length ? slideIndex = 1 : null
    n < 1 ? slideIndex = slides.length : null
