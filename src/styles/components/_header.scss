@@ -77,13 +77,31 @@ header {
 
       nav.user_nav {
          margin-left: auto;
-
+         
+         @include respond-to('small') {
+            margin-right: 24px;
+         }
+         
          i {
             color: var.$icon-white
          }
+         .cart_btn {
+            position: relative;
 
-         @include respond-to('small') {
-            margin-right: 24px;
+            span {
+               position: absolute;
+               right: -10px;
+               bottom: -10px;
+               width: 20px;
+               height: 20px;
+
+               text-align: center;
+               font-size: 0.93rem;
+               line-height: 1.25rem;
+               color: var.$color-white;
+               background: var.$color-green;
+               border-radius: 12px;
+            }
          }
       }
    }

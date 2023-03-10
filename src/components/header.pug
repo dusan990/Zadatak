@@ -23,8 +23,12 @@ header
       nav.user_nav
          ul.gap_24
             li
-               i.fa-solid.fa-user.fa-lg
+               a(href="#" aria-label="User profile")
+                  i.fa-solid.fa-user.fa-lg
             li 
-               i.fa-solid.fa-heart.fa-lg
+               a(href="#" aria-label="Favorites")
+                  i.fa-solid.fa-heart.fa-lg
             li
-               i.fa-solid.fa-cart-shopping.fa-lg
+               a.cart_btn(href="#" aria-label="Cart")
+                  span 1
+                  i.fa-solid.fa-cart-shopping.fa-lg

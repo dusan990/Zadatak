@@ -2,20 +2,19 @@ body
    include src/components/header.pug
 
    main
-
       section.product.container
          include src/components/breadcrumb.pug
 
          div.product-nav.mb_32
             h1 Product name lorem ipsum
             nav.gap_24
-               button(aria-label="Go to previous product")
+               a(aria-label="Go to previous product")
                   i.fa-solid.fa-arrow-left.fa-lg
-               button(aria-label="Go to next product")
+               a(aria-label="Go to next product")
                   i.fa-solid.fa-arrow-right.fa-lg
-               button(aria-label="Add product to favorites")
+               a(aria-label="Add product to favorites")
                   i.fa-solid.fa-heart.fa-lg
-               button(aria-label="Share product")
+               a(aria-label="Share product")
                   i.fa-solid.fa-share-nodes.fa-lg
 
          .product-core
