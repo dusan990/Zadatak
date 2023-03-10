@@ -1,0 +1,56 @@
+@use '../abstract/variables' as var;
+@use '../abstract/mixin' as *;
+
+.btn {
+   
+   &_icon {
+      width: 56px;
+      height: 56px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      border-radius: 32px;
+      background: var.$color-grey-light;
+
+      @include respond-to('small') {
+         width: 48px;
+         height: 48px;
+      }
+   }
+
+   &_menu {
+      padding: 24px;
+      color: white;
+   }
+   
+   
+   &_primary,
+   &_secondary {
+      border-radius: 4px;
+   }
+
+   &_primary {
+      color: var.$color-white;
+
+      &--green {
+         background: var.$color-green;
+      }
+      &--orange {
+         background: var.$color-orange;
+      }
+   }
+
+   &_secondary {
+      background: var.$color-white;
+      outline: 1px solid var.$color-grey-medium;
+      
+      &--green {
+         color: var.$color-green;
+      }
+      &--orange {
+         color: var.$color-orange;
+      }
+   }
+}

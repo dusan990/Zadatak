@@ -1,16 +1,61 @@
 @use '../abstract/variables' as var;
+@use '../abstract/mixin' as *;
 
-.input_container {
-   height: 56px;
+.option_container {
    display: flex;
    align-items: center;
+}
+
+.select,
+.search_input {
+   height: 56px;
    padding-inline: 16px 14px;
    
-   background: var.$color-grey-light;
    border-bottom: 1px solid var.$color-border;
    border-radius: 4px 4px 0 0;
+}
+
+.search_input {
+   display: flex;
+   align-items: center;
+   background: var.$color-grey-light;
 
    &::placeholder {
       color: var.$color-grey-darkest;
    }
 }
+
+.select {
+   width: 100%;
+   position: relative;
+   padding: 4px 12px 16px 16px;
+   background: var.$color-white;
+   cursor: pointer;
+
+
+   select {
+      width: 100%;
+      height: 56px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 24px 12px 0px 16px;
+      font-size: 14px;
+      line-height: 18px;
+   }
+   
+   label {
+      font-size: 11px;
+      line-height: 18px;
+      color: var.$color-grey-darkest;
+   }
+   
+   i {
+      position: absolute;
+      top: calc(50% - 9px);
+      right: 12px;
+      font-size: 18px;
+      color: var.$color-grey-semiblack;
+   }
+}
+

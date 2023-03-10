@@ -2,8 +2,43 @@
 @use 'base';
 @use 'pages';
 @use 'components';
+@use './abstract/mixin' as *;
+
+main {
+   @include respond-to('small') {
+      padding-inline: 24px;
+   }
+}
 
 .container {
-   width: 1216px;
+   max-width: 1216px;
    margin-inline: auto;
+
+   @include respond-to('small') {
+      width: 100%;
+   }
+}
+
+label {
+   display: flex;
+   align-items: center;
+}
+
+.img_wrap {
+   overflow: hidden;
+   
+   @include respond-to('small') {
+      width: calc(100% + 48px);
+      margin-left: -24px;
+   }
+
+   img {
+      outline: 1px solid red;;
+      width: 100%;
+      height: auto;
+   }
+}
+
+*:focus-visible {
+   outline: 2px solid blue;
 }

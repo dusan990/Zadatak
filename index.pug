@@ -1,2 +1,144 @@
 body
    include src/components/header.pug
+
+   main
+
+      section.product.container
+         include src/components/breadcrumb.pug
+
+         div.product-nav.mb_32
+            h1 Product name lorem ipsum
+            nav.gap_24
+               i.fa-solid.fa-arrow-left.fa-lg
+               i.fa-solid.fa-arrow-right.fa-lg
+               i.fa-solid.fa-heart.fa-lg
+               i.fa-solid.fa-share-nodes.fa-lg
+
+         .product-core
+            .product-slider
+               button.btn_icon#prev
+                  i.fa-solid.fa-chevron-left.fa-lg
+               .product-slider-slide.img_wrap
+                  img(src="./src/assets/image 1.png" alt="electric black bicycle")
+               .product-slider-slide.img_wrap
+                  img(src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" alt="electric black bicycle")
+               button.btn_icon#next
+                  i.fa-solid.fa-chevron-right.fa-lg
+
+            .product-core-description
+               p.product-status.body--bold.mb_12 In stock 
+                  span - only 2 left
+               p.product-description-text.mb_24 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+               .product-selection
+                  .select
+                     label Model
+                     select
+                        option(value="placeholder-item" selected="") Choose an option
+                        option(value="Ladies - Small") Ladies - Small
+                        option(value="Ladies - Medium") Ladies - Medium
+                        option(value="Ladies - Large") Ladies - Large
+                        option(value="Gents - Small") Gents - Small
+                        option(value="Gents - Medium") Gents - Medium
+                        option(value="Gents - Large") Gents - Large
+                     i.fa-solid.fa-chevron-down
+                  .select
+                     label Color
+                     select
+                        option(value="placeholder-item" selected="") Choose an option
+                        option(value="Black") Black
+                        option(value="White") White
+                        option(value="Blue") Blue
+                     i.fa-solid.fa-chevron-down
+                  
+               .option_container.mb_12
+                  input(
+                     id="option1"
+                     type="checkbox"
+                     aria-label="Add option lorem ipsum"
+                     checked
+                  )
+                  label.gap_8(for="option1") Add option lorem ipsum
+               .option_container.mb_24
+                  input(
+                     id="option2"
+                     type="checkbox"
+                     aria-label="Add option autpat velit cano totam rem aperiam"
+                  )
+                  label.gap_8(for="option2") Add option lorem ipsum
+               
+               .product-actions-container
+                  button.btn_primary.btn_primary--green Add to cart
+                  button.btn_secondary.btn_secondary--green Contact us
+
+      .product_info
+         nav.product_info-nav
+            .container
+               a(href="#description") Description
+               a(href="#specifications") Specifications
+               a(href="#reviews") Reviews (7)
+
+         .product_info-desc#description
+            .container
+               div
+                  h2 Product description
+                  p.mb_24 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </br> Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+                  button.btn_secondary.btn_secondary--orange More info
+               div.img_wrap
+                  img(src="./src/assets/Mask group.png", alt="two women riding bicycles")
+
+         .product_info-techspec#specifications
+            .container
+               h2.mb_32 Technical specifications
+               table
+                  thead
+                     tr
+                        th Model
+                        th Frame size
+                        th Weight
+                        th Max speed
+                        th Battery
+                        th Engine
+                  tbody
+                     tr
+                        td Ladies - Small
+                        td 50 cm
+                        td 24 kg
+                        td 45 km/h
+                        td 625 Wh
+                        td Bosch Performance Line Speed
+                     tr
+                        td Ladies - Small
+                        td 55 cm
+                        td 25 kg
+                        td 45 km/h
+                        td 625 Wh
+                        td Bosch Performance Line Speed
+                     tr
+                        td Ladies - Large
+                        td 60 cm
+                        td 26 kg
+                        td 45 km/h
+                        td 625 Wh
+                        td Bosch Performance Line Speed
+                     tr
+                        td Gents - Small
+                        td 50 cm
+                        td 24 kg
+                        td 45 km/h
+                        td 625 Wh
+                        td Bosch Performance Line Speed
+                     tr
+                        td Gents - Medium
+                        td 55 cm
+                        td 25 kg
+                        td 45 km/h
+                        td 625 Wh
+                        td Bosch Performance Line Speed
+                     tr
+                        td Gents - Large
+                        td 60 cm
+                        td 26 kg
+                        td 45 km/h
+                        td 625 Wh
+                        td Bosch Performance Line Speed

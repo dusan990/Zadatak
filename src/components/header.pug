@@ -1,27 +1,29 @@
 header
    .container
-      a(href="#") 
+      button.btn.btn_menu
+         i.fa-solid.fa-bars.fa-lg
+      a(href="index.html" aria-label="Go to home screen")
          include ../assets/logo.pug
       nav.main_nav
          ul
             li
-               a(class="dsds" href="index.html") Products
+               a(href="index.html") Products
             li
-               a(href="services.html") Services
+               a(href="#") Services
             li
-               a(href="aboutus.html") About us
+               a(href="#") About us
             li
-               a(href="contact.html") Contact
+               a(href="#") Contact
 
-      .input_container
+      .search_input
          input.input.input--icon(type="search" placeholder="Search")
          i.fa-solid.fa-magnifying-glass.fa-lg
       
       nav.user_nav
-         ul
+         ul.gap_24
             li
                i.fa-solid.fa-user.fa-lg
-            li
+            li 
                i.fa-solid.fa-heart.fa-lg
             li
                i.fa-solid.fa-cart-shopping.fa-lg

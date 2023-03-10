@@ -6,6 +6,7 @@ body {
    line-height: 1.5rem;
    font-style: normal;
    font-weight: 400;
+   color: var.$color-grey-semiblack;
 }
 
 h1, h2 {
@@ -35,7 +36,7 @@ h2 {
 }
 
 a {
-   font-weight: 600;
+   font-weight: 400;
    font-size: 1.125rem;
 }
 
@@ -44,19 +45,31 @@ p {
    &.body {
       font-weight: 400;
       color: #1E1E1E;
+
+      &--small {
+         font-size: 1.142rem;
+      }
+      &--bold {
+         font-weight: 600;
+      }
    }
 
-   &--small {
-      font-size: 1.142rem;
-   }
-   &--bold {
-      font-weight: 600;
-   }
 }
 
-label {
-   font-size: 0.8rem;
+label, th, td {
+   font-size: 0.875rem;
    line-height: 1.5rem;
+}
+
+th {
+   font-weight: 600; 
+   color: var.$color-orange;
+}
+
+button {
+   font-family: var.$ff-poppins;
+   font-weight: 600;
+   padding: 12px 24px;
 }
 
 // /* Cart-value */

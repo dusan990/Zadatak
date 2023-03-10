@@ -1,0 +1,252 @@
+@use '../abstract/variables' as var;
+@use '../abstract/mixin' as *;
+@import url('//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css');
+
+.product {
+   display: flex;
+   flex-direction: column;
+
+   &-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+      @include respond-to('small') {
+         gap: 24px;
+         flex-direction: column;
+         align-items: flex-start;
+      }
+
+      nav {
+         display: flex;
+
+         @include respond-to('small') {
+            flex-wrap: wrap;
+         }
+      }
+   }
+      
+   &-core {
+      display: flex;
+      gap: 32px;
+      
+      @include respond-to('small') {
+         flex-wrap: wrap;
+      }
+      
+      .product-slider {
+         position: relative;
+         flex-basis: 60%;
+         flex-grow: 1;
+         
+         .btn_icon {
+            position: absolute;
+            top: calc(50% - 28px);
+            
+            &:last-of-type {
+               right: 0;
+
+               @include respond-to('small') {
+                  right: -12px;
+               }
+            }
+
+            &:first-of-type {
+               @include respond-to('small') {
+                  left: -12px;
+               }
+            }
+         }
+      }
+      
+      &-description {
+         flex-basis: 40%;
+         flex-grow: 1;
+         padding: 24px 32px;
+         padding-bottom: 64px;
+         display: flex;
+         flex-direction: column;
+         background-color: var.$color-grey-light;
+         
+         @include respond-to('small') {
+            padding: 24px 16px 24px 24px;
+         }
+
+         .body--bold {
+            span {
+               color: var.$color-orange;
+            }
+         }
+         
+         .product-actions-container {
+            @include respond-to('small') {
+               width: 100%;
+               display: flex;
+               gap: 8px;
+            }
+
+            button:first-of-type {
+               margin-right: 8px;
+            }
+            
+            button {
+               @include respond-to('small') {
+                  width: 100%;
+                  margin-right: 0;
+               }
+            }
+         }
+
+         .product-selection {
+            width: 100%;
+            display: flex;
+            gap: 24px;
+            margin-bottom: 24px;
+            
+            @include respond-to('small') {
+               display: flex;
+               flex-wrap: wrap;
+               gap: 16px;
+            }
+         }
+      }
+   }
+}
+
+.product_info {
+   &-desc {
+      padding-block: 64px;
+      
+      @include respond-to('small') {
+         padding-block: 40px;
+      }
+      
+      .container {
+         display: flex;
+         gap: calc((100% / 12) * 1 + 64px);
+
+         @include respond-to('small') {
+            gap: 24px;
+            flex-direction: column-reverse;
+         }
+         
+         h2 {
+            margin-bottom: 32px;
+            
+            @include respond-to('small') {
+               margin-bottom: 24px;
+            }
+         }
+
+         div:first-of-type {
+            width: calc((100% / 12) * 5);
+            
+            @include respond-to('small') {
+               width: 100%;
+            }
+         }
+         div.img_wrap {
+            width: calc((100% / 12) * 5);
+
+            @include respond-to('small') {
+               width: calc(100% + 48px);
+            }
+         }
+      }
+   }
+
+   &-nav {
+      border-bottom: 1px solid var.$color-border;
+
+      @include respond-to('small') {
+         width: calc(100% + 48px);
+         margin-left: -24px;
+      }
+      
+      .container {
+         display: flex;
+         padding-block: 20px;
+         gap: 32px;
+         
+         @include respond-to('small') {
+            padding: 32px 24px 20px 24px;
+            gap: 24px;
+         }
+
+         a {
+            font-size: 1rem;
+            font-weight: 600;
+         }
+      }
+   }
+
+   &-techspec {
+      padding-block: 40px 88px;
+      background: var.$color-grey-light;  
+      
+      @include respond-to('small') {
+         width: calc(100% + 48px);
+         margin-left: -24px;
+         padding: 32px 24px 64px 24px;
+         overflow-y: scroll;
+      }
+   }
+}
+
+
+input[type=checkbox] {
+   display: none;
+}
+
+input[type=checkbox]+label:before {
+   font-family: FontAwesome;
+   display: inline-block;
+}
+
+input[type=checkbox]+label:before {
+   content: "\f0c8";
+   font-size: 20px;
+   color: var.$color-grey-dark;
+}
+
+// input[type=checkbox]+label:before {
+//    letter-spacing: 10px;
+// }
+
+input[type=checkbox]:checked+label:before {
+   content: "\f14a";
+   font-size: 20px;
+   color: var.$color-green;
+}
+
+// input[type=checkbox]:checked+label:before {
+//    letter-spacing: 5px;
+// }
+
+.gap_8 {
+   gap: 8px;
+}
+.gap_24 {
+   gap: 24px
+}
+.mr_8 {
+   margin-right: 8px
+}
+.ml_8 {
+   margin-left: 8px
+}
+.mb_24 {
+   margin-bottom: 24px;
+}
+.mb_32 {
+   margin-bottom: 32px;
+}
+.mt_40 {
+   margin-top: 40px;
+}
+.mb_12 {
+   margin-bottom: 12px;
+}
+.my_24 {
+   margin-bottom: 32px;
+}

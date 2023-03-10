@@ -1,4 +1,5 @@
 @use '../abstract/variables' as var;
+@use '../abstract/mixin' as *;
 
 header {
    // padding-block: 32px;
@@ -11,13 +12,25 @@ header {
       nav {
          ul {
             display: flex;
-            gap: 24px;
+         }
+      }
+
+      .btn_menu {
+         margin-right: 8px;
+      }
+      
+      .search_input {
+         @include respond-to('small') {
+            display: none;
          }
       }
 
       nav.main_nav {
          margin-inline: 48px 32px;
-         //@support
+
+         @include respond-to('small') {
+            display: none;
+         }
          
          ul {
             li {
@@ -56,6 +69,10 @@ header {
 
          i {
             color: var.$icon-white
+         }
+
+         @include respond-to('small') {
+            margin-right: 24px;
          }
       }
    }

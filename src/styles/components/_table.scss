@@ -1,0 +1,59 @@
+@use '../abstract/variables' as var;
+@use '../abstract/mixin' as *;
+
+table {
+   width: 100%;
+   background: inherit;
+   
+   tr {
+      height: 40px;
+
+      th, td {
+         min-width: 100px;
+         display: table-cell;
+         box-sizing: content-box;
+         vertical-align: middle;
+   
+         &:first-of-type {
+            padding-left: 20px;
+         }
+         &:last-of-type {
+            width: 100%;
+            padding-right: 20px;
+
+            @include respond-to('small') {
+               min-width: 250px;
+            }
+         }
+         
+         &:nth-of-type(1) {
+            min-width: 150px;
+         }
+         &:nth-of-type(2),
+         &:nth-of-type(4) {
+            min-width: 125px;
+         }
+         &:nth-of-type(3),
+         &:nth-of-type(5) {
+            max-width: 100px;
+         }
+      }
+   }
+   
+   
+   thead {
+      tr {
+         th {
+            background: transparent;
+         }
+      }
+   }
+
+   tbody {
+      tr {
+         &:nth-child(odd) {
+            background: var.$color-white;
+         }
+      }
+   }
+}

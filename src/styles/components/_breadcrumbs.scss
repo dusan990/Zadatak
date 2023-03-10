@@ -1,0 +1,22 @@
+@use '../abstract/variables' as var;
+
+.breadcrumbs {
+   ul {
+      display: flex;
+      gap: 12px;
+
+      li {
+         display: flex;
+         align-items: center;
+         
+         a {
+            margin-right: 10px;
+            font-size: 0.812rem;
+            line-height: 1.384rem;
+         }
+         a, i {
+            color: var.$color-grey-semiblack;
+         }
+      }
+   }
+}
