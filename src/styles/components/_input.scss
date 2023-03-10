@@ -2,8 +2,38 @@
 @use '../abstract/mixin' as *;
 
 .option_container {
+   position: relative;
    display: flex;
    align-items: center;
+   
+   
+   input[type=checkbox] {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      margin: 0;
+      padding: 0;
+      z-index: 1;
+   }
+   
+   input[type=checkbox]+label:before {
+      font-family: FontAwesome;
+      display: inline-block;
+   }
+   
+   input[type=checkbox]+label:before {
+      content: "\f0c8";
+      font-size: 20px;
+      color: var.$color-grey-dark;
+   }
+   
+   input[type=checkbox]:checked+label:before {
+      content: "\f14a";
+      font-size: 20px;
+      color: var.$color-green;
+   }
 }
 
 .select,

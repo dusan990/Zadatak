@@ -1,5 +1,6 @@
 header
    .container
+      a.skip_link(href="index.html" aria-label="Jump to product section") Jump to product section
       button.btn.btn_menu
          i.fa-solid.fa-bars.fa-lg
       a(href="index.html" aria-label="Go to home screen")
@@ -7,16 +8,16 @@ header
       nav.main_nav
          ul
             li
-               a(href="index.html") Products
+               a(href="index.html" aria-label="Products") Products
             li
-               a(href="#") Services
+               a(href="#" aria-label="Services") Services
             li
-               a(href="#") About us
+               a(href="#" aria-label="About us") About us
             li
-               a(href="#") Contact
+               a(href="#" aria-label="Contact") Contact
 
       .search_input
-         input.input.input--icon(type="search" placeholder="Search")
+         input.input.input--icon(type="search" placeholder="Search" aria-label="Search")
          i.fa-solid.fa-magnifying-glass.fa-lg
       
       nav.user_nav

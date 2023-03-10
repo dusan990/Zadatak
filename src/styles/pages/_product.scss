@@ -20,6 +20,10 @@
       nav {
          display: flex;
 
+         button {
+            padding: 0;
+         }
+
          @include respond-to('small') {
             flex-wrap: wrap;
          }
@@ -28,9 +32,11 @@
       
    &-core {
       display: flex;
+      flex-direction: row-reverse;
       gap: 32px;
       
       @include respond-to('small') {
+         flex-direction: column-reverse;
          flex-wrap: wrap;
       }
       
@@ -140,7 +146,7 @@
 
          div:first-of-type {
             width: calc((100% / 12) * 5);
-            
+
             @include respond-to('small') {
                width: 100%;
             }
@@ -192,36 +198,6 @@
       }
    }
 }
-
-
-input[type=checkbox] {
-   display: none;
-}
-
-input[type=checkbox]+label:before {
-   font-family: FontAwesome;
-   display: inline-block;
-}
-
-input[type=checkbox]+label:before {
-   content: "\f0c8";
-   font-size: 20px;
-   color: var.$color-grey-dark;
-}
-
-// input[type=checkbox]+label:before {
-//    letter-spacing: 10px;
-// }
-
-input[type=checkbox]:checked+label:before {
-   content: "\f14a";
-   font-size: 20px;
-   color: var.$color-green;
-}
-
-// input[type=checkbox]:checked+label:before {
-//    letter-spacing: 5px;
-// }
 
 .gap_8 {
    gap: 8px;

@@ -6,12 +6,23 @@ header {
    background-color: var.$color-orange;
    
    .container {
+      position: relative;
       display: flex;
       align-items: center;
 
       nav {
          ul {
             display: flex;
+         }
+      }
+
+      .skip_link {
+         position: absolute;
+         transform: translateY(-120px);
+         transition: all .2s ease-in-out;
+         
+         &:focus-visible {
+            transform: translateY(0px);
          }
       }
 

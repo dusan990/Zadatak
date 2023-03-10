@@ -9,23 +9,17 @@ body
          div.product-nav.mb_32
             h1 Product name lorem ipsum
             nav.gap_24
-               i.fa-solid.fa-arrow-left.fa-lg
-               i.fa-solid.fa-arrow-right.fa-lg
-               i.fa-solid.fa-heart.fa-lg
-               i.fa-solid.fa-share-nodes.fa-lg
+               button(aria-label="Go to previous product")
+                  i.fa-solid.fa-arrow-left.fa-lg
+               button(aria-label="Go to next product")
+                  i.fa-solid.fa-arrow-right.fa-lg
+               button(aria-label="Add product to favorites")
+                  i.fa-solid.fa-heart.fa-lg
+               button(aria-label="Share product")
+                  i.fa-solid.fa-share-nodes.fa-lg
 
          .product-core
-            .product-slider
-               button.btn_icon#prev
-                  i.fa-solid.fa-chevron-left.fa-lg
-               .product-slider-slide.img_wrap
-                  img(src="./src/assets/image 1.png" alt="electric black bicycle")
-               .product-slider-slide.img_wrap
-                  img(src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" alt="electric black bicycle")
-               button.btn_icon#next
-                  i.fa-solid.fa-chevron-right.fa-lg
-
-            .product-core-description
+            .product-core-description(tabindex="0")
                p.product-status.body--bold.mb_12 In stock 
                   span - only 2 left
                p.product-description-text.mb_24 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -55,21 +49,33 @@ body
                   input(
                      id="option1"
                      type="checkbox"
-                     aria-label="Add option lorem ipsum"
+                     aria-checked="true"
+                     aria-labelledby="option-label"
+                     tabindex="0"
                      checked
                   )
-                  label.gap_8(for="option1") Add option lorem ipsum
+                  label#option-label-1.gap_8(for="option1") Add option lorem ipsum
                .option_container.mb_24
                   input(
                      id="option2"
                      type="checkbox"
-                     aria-label="Add option autpat velit cano totam rem aperiam"
+                     aria-checked="false"
+                     aria-labelledby="option-label-2"
                   )
-                  label.gap_8(for="option2") Add option lorem ipsum
+                  label#option-label-2.option-label.gap_8(for="option2") Add option lorem ipsum
                
                .product-actions-container
                   button.btn_primary.btn_primary--green Add to cart
                   button.btn_secondary.btn_secondary--green Contact us
+            .product-slider(tabindex="1" aria-label="Product gallery")
+               button.btn_icon#prev(aria-label="Prevous image")
+                  i.fa-solid.fa-chevron-left.fa-lg
+               .product-slider-slide.img_wrap
+                  img(src="./src/assets/image 1.png" alt="electric black bicycle")
+               .product-slider-slide.img_wrap
+                  img(src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80" alt="electric black bicycle")
+               button.btn_icon#next(aria-label="Next image image")
+                  i.fa-solid.fa-chevron-right.fa-lg
 
       .product_info
          nav.product_info-nav
@@ -90,7 +96,12 @@ body
          .product_info-techspec#specifications
             .container
                h2.mb_32 Technical specifications
-               table
+               table(
+                  role="table"
+                  aria-label="Semantic Elements"
+                  aria-rowcount="6"
+                  tabindex="0"
+               )
                   thead
                      tr
                         th Model
